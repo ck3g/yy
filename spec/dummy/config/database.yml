@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: '123'
+
+development:
+  <<: *common
+  database: dummy_development
+
+test:
+  <<: *common
+  database: dummy_test
+
+production:
+  <<: *common
+  database: dummy_development
