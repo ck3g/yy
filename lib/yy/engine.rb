@@ -1,6 +1,8 @@
 require 'jquery-rails'
 require 'angularjs-rails'
 require 'coffee-rails'
+require 'sass-rails'
+require 'bootstrap-sass'
 
 module Yy
   class Engine < ::Rails::Engine
