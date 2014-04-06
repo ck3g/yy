@@ -3,7 +3,7 @@
   $scope.topics = [{ title: "Loading...", content: '' }]
 
   loadTopics = ->
-    $http.get("/yy/topics.json").success (data) ->
+    $http.get("/yy/api/topics.json").success (data) ->
       $scope.topics = data
 
   loadTopics()

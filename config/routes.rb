@@ -1,5 +1,7 @@
 Yy::Engine.routes.draw do
-  resources :topics, only: [:index]
+  namespace :api, defaults: { format: :json } do
+    resources :topics, only: [:index]
+  end
 
   root to: 'topics#index'
 end
