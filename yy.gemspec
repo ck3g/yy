@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap-sass', '~> 3.1.1'
 
   s.add_development_dependency "pg"
+  s.add_development_dependency "devise", "~> 3.2.4"
 
   s.add_development_dependency 'launchy'
   s.add_development_dependency 'rspec-rails'
