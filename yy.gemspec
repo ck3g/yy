@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.summary     = "Yackety-Yack Forum Engine"
   s.description = "Primary developed to be used as forum for starcraft.md. The main goals also to get with Rails Engines and practicing AngularJS"
 
-
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files       = `git ls-files`.split("\n")
+  s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
 
   s.add_dependency "rails", "~> 4.0.4"
 
