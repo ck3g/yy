@@ -1,7 +1,7 @@
 require_dependency "yy/application_controller"
 
 module Yy
-  class TopicsController < ApplicationController
+  class WelcomeController < ApplicationController
 
     def index
     end

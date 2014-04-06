@@ -3,5 +3,5 @@ Yy::Engine.routes.draw do
     resources :topics, only: [:index]
   end
 
-  root to: 'topics#index'
+  root to: 'welcome#index'
 end
