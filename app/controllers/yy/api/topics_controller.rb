@@ -1,9 +1,7 @@
 require_dependency "yy/application_controller"
 
 module Yy
-  class Api::TopicsController < ApplicationController
-    respond_to :json
-
+  class Api::TopicsController < Api::ApiController
     def index
       topics = Topic.all
       respond_with topics
