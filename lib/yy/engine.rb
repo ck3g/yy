@@ -1,3 +1,7 @@
+require 'jquery-rails'
+require 'angularjs-rails'
+require 'coffee-rails'
+
 module Yy
   class Engine < ::Rails::Engine
     isolate_namespace Yy

@@ -2,7 +2,11 @@ PATH
   remote: .
   specs:
     yy (0.0.1)
+      angularjs-rails
+      coffee-rails
+      jquery-rails
       rails (~> 4.0.4)
+      sass-rails
 
 GEM
   remote: https://rubygems.org/
@@ -32,6 +36,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     addressable (2.3.6)
+    angularjs-rails (1.2.15)
     arel (4.0.2)
     builder (3.1.4)
     capybara (2.2.1)
@@ -138,13 +143,10 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  coffee-rails
   database_cleaner
   factory_girl_rails
-  jquery-rails
   launchy
   pg
   rspec-rails
-  sass-rails
   shoulda
   yy!

@@ -17,6 +17,10 @@ Gem::Specification.new do |s|
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
 
   s.add_dependency "rails", "~> 4.0.4"
+  s.add_dependency "angularjs-rails"
+  s.add_dependency 'coffee-rails'
+  s.add_dependency 'jquery-rails'
+  s.add_dependency 'sass-rails'
 
   s.add_development_dependency "pg"
 
@@ -26,8 +30,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'factory_girl_rails'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'shoulda'
-
-  s.add_development_dependency 'jquery-rails'
-  s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'coffee-rails'
 end
