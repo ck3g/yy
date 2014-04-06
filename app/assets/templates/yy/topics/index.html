@@ -1,5 +1,51 @@
-<h1>List of the topics</h1>
-
-<div ng-repeat="topic in topics">
-  <h2>{{topic.title}}</h2>
+<div class="topic-actions">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default">All categories</button>
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">All categories</a></li>
+      <li><a href="#">Category #1</a></li>
+      <li><a href="#">Category #2</a></li>
+      <li><a href="#">Category #3</a></li>
+    </ul>
+  </div>
+  <a href="#" class="btn btn-link">Latest</a>
+  <a href="#" class="btn btn-link">New</a>
+  <a href="#" class="btn btn-link">Unread</a>
+  <a href="#" class="btn btn-link">Starred</a>
+  <a href="#" class="btn btn-link">Top</a>
+  <a href="#" class="btn btn-link">Categories</a>
+  <a href="#" class="btn btn-default pull-right">+ Create Topic</a>
 </div>
+
+<div class="clear-fix"></div>
+
+<table class="table table-striped topic-list">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Topic</th>
+      <th>Category</th>
+      <th>Users</th>
+      <th>Posts</th>
+      <th>Likes</th>
+      <th>Views</th>
+      <th>Acitivity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="topic in topics">
+      <td></td>
+      <td class="title">{{topic.title}}</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

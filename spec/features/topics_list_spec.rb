@@ -5,7 +5,6 @@ feature 'List of the topics', js: true do
 
   scenario 'can view list of the topics' do
     visit yy_path
-    expect(page).to have_content 'List of the topics'
     expect(page).to have_content 'Welcome to the Yackety-Yack'
   end
 end
