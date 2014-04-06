@@ -8,6 +8,7 @@ require 'factory_girl'
 require 'database_cleaner'
 require 'shoulda'
 require 'capybara/poltergeist'
+require 'devise'
 
 Capybara.javascript_driver = :poltergeist
 
@@ -42,6 +43,8 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include FactoryGirl::Syntax::Methods
+  config.include Devise::TestHelpers, type: :controller
+  config.include Features::AuthHelpers
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)

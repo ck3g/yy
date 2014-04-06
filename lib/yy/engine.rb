@@ -3,6 +3,7 @@ require 'angularjs-rails'
 require 'coffee-rails'
 require 'sass-rails'
 require 'bootstrap-sass'
+require 'devise'
 
 module Yy
   class Engine < ::Rails::Engine

@@ -20,7 +20,16 @@
       <a class="navbar-brand" href="#">Yackety-Yack</a>
     </div>
     <div class="navbar-collapse collapse">
-      <p class="navbar-text navbar-right">Welcome <a href="#" class="navbar-link">Guest</a></p>
+      <div class="navbar-right">
+        <p class="navbar-text">Welcome <a href="#" class="navbar-link"><%= current_user ? current_user.email : "Guest" %></a></p>
+        <ul class="nav navbar-nav">
+          <% if user_signed_in? %>
+            <li><%= link_to 'Logout', destroy_session_path(user_resource_name) %></li>
+          <% else %>
+            <li><%= link_to 'Login', new_session_path(user_resource_name) %></li>
+          <% end %>
+        </ul>
+    </div>
     </div>
   </div>
 </nav>
