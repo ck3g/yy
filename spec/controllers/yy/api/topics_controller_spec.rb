@@ -13,5 +13,23 @@ module Yy
       it { should respond_with :success }
       it { expect(Topic).to have_received(:all) }
     end
+
+    describe 'POST #create' do
+      context 'with valid attributes' do
+        before do
+          post :create, use_route: :yy, format: :json,
+            topic: { title: 'My topic title', content: "Content" }
+        end
+        it { should respond_with :created }
+      end
+
+      context 'with invalid attributes' do
+        before do
+          post :create, use_route: :yy, format: :json,
+            topic: { title: 'Invalid', content: '' }
+        end
+        it { should respond_with :unprocessable_entity }
+      end
+    end
   end
 end
