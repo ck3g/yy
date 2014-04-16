@@ -38,4 +38,11 @@ body {
     padding: 30px 70px 10px 70px;
   }
 
+  .has-feedback {
+    .form-control-feedback {
+      top: 0px;
+      right: 15px;
+    }
+  }
+
 }

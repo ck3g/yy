@@ -12,3 +12,4 @@
   $scope.hideNewTopicForm = ->
     $scope.newTopicFormVisible = false
 
+
