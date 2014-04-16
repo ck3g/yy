@@ -1,5 +1,5 @@
 
-@TopicFormCtrl = ($scope) ->
+@Yy.controller 'TopicFormCtrl', ($scope) ->
   $scope.submitForm = (isValid) ->
     if isValid
       console.log "Form is valid"

@@ -15,4 +15,6 @@
 //= require angular-route
 //= require angular-resource
 //= require bootstrap
+//= require yy/main
+//
 //= require_tree .
