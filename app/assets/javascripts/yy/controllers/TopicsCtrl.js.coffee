@@ -4,3 +4,11 @@
 
   $scope.currentUserId = Session.currentUser.id
 
+  $scope.newTopicFormVisible = false
+
+  $scope.showNewTopicForm = ->
+    $scope.newTopicFormVisible = true
+
+  $scope.hideNewTopicForm = ->
+    $scope.newTopicFormVisible = false
+

@@ -18,3 +18,24 @@ body {
   min-height: 2000px;
   padding-top: 70px;
 }
+
+#create-topic-control {
+  height: 400px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #f0f0f0;
+  zoom: 1;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+
+  div.modal-header {
+    padding: 20px 70px;
+  }
+
+  div.topic-content {
+    padding: 30px 70px 10px 70px;
+  }
+
+}
