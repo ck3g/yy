@@ -2,6 +2,9 @@ require 'spec_helper'
 
 module Yy
   describe Api::TopicsController do
+    let!(:user) { create :user }
+    before { sign_in_as user }
+
     describe 'GET #index' do
       let(:topic) { mock_model Topic }
 

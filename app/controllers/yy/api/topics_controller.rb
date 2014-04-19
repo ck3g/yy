@@ -10,7 +10,10 @@ module Yy
     end
 
     def create
-      respond_with Topic.create(safe_params), location: ''
+      topic = Topic.new safe_params
+      topic.user = current_user
+      topic.save
+      respond_with topic, location: ''
     end
 
     private

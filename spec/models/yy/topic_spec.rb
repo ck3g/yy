@@ -10,6 +10,7 @@ module Yy
       it { should validate_presence_of :title }
       it { should ensure_length_of(:title).is_at_least(10) }
       it { should validate_presence_of :content }
+      it { should validate_presence_of :user_id }
     end
   end
 end

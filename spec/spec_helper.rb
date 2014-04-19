@@ -43,8 +43,11 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include FactoryGirl::Syntax::Methods
+
   config.include Devise::TestHelpers, type: :controller
-  config.include Features::AuthHelpers
+  config.include ControllerMacros, type: :controller
+
+  config.include Features::AuthHelpers, type: :feature
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
