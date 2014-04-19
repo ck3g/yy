@@ -1,5 +1,13 @@
 
-@Yy.controller 'TopicFormCtrl', ($scope) ->
-  $scope.submitForm = (isValid) ->
-    if isValid
-      console.log "Form is valid"
+angular.module('Yy').controller 'TopicFormCtrl', ($scope, $location, Topic) ->
+  $scope.submitForm = ->
+
+    if $scope.topicForm.$valid
+      topic = new Topic(
+        title: $scope.topicForm.title.$modelValue
+        content: $scope.topicForm.content.$modelValue
+      ).$save()
+      topic.then (response) ->
+        $scope.topics.push response
+        $location.path('/')
+

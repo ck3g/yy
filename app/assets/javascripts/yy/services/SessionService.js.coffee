@@ -1,4 +1,4 @@
-@Yy.factory 'Session', ($window) ->
+angular.module('Yy').factory 'Session', ($window) ->
   factory =
     currentUser:
       $window.gon.current_user
