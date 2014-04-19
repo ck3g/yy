@@ -1,0 +1,15 @@
+<table class="table table-striped category-list">
+  <thead>
+    <th>Category</th>
+    <th>Latest</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="category in categories">
+      <td>
+        <h4><span class="label label-default">{{category.name}}</span></h4>
+        <div>{{category.description}}</div>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

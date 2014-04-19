@@ -3,6 +3,7 @@
 
 @Yy.config (['$routeProvider', ($routeProvider) ->
   $routeProvider
+    .when('/categories', { templateUrl: '../assets/yy/categories/index.html', controller: 'CategoriesCtrl'})
     .otherwise({ templateUrl: '../assets/yy/topics/index.html', controller: 'TopicsCtrl' })
 ])
 
