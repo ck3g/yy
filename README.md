@@ -42,6 +42,13 @@ to
 in your `config/environments/production.rb`
 
 
+### Customizing
+
+Create `config/initializers/yy.rb`
+
+```ruby
+Yy.user_class = "User"
+```
 
 
 # License
