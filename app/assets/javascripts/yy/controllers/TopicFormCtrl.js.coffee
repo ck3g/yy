@@ -1,5 +1,7 @@
 
-angular.module('Yy').controller 'TopicFormCtrl', ($scope, $location, Topic) ->
+angular.module('Yy').controller 'TopicFormCtrl', ($scope, $location, Topic, NewTopicForm) ->
+  $scope.newTopicForm = NewTopicForm
+
   $scope.submitForm = ->
 
     if $scope.topicForm.$valid
