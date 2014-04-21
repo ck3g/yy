@@ -1,0 +1,32 @@
+<div id="create-topic-control" ng-show="newTopicForm.show" ng-controller="TopicFormCtrl">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="newTopicForm.show = false">x</button>
+    <h4 class="modal-title">Create a new Topic</h4>
+    </div>
+  <div class="topic-content row">
+    <form name="topicForm" ng-submit="submitForm(topicForm.$valid)" novalidate>
+      <div class="form-group col-md-6" ng-class="{ 'has-error has-feedback': topicForm.title.$invalid && topicForm.title.$dirty, 'has-success has-feedback': topicForm.title.$valid && topicForm.title.$dirty }">
+        <input class="form-control" ng-model="topic.title" name="title" placeholder="Type your title here. Title should contains at least 10 characters" required ng-minlength="10" />
+        <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="topicForm.title.$valid && topicForm.title.$dirty"></span>
+        <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="topicForm.title.$invalid && topicForm.title.$dirty"></span>
+      </div>
+      <div class="form-group col-md-6">
+        <select class="form-control">
+          <option></option>
+          <option value="1">Category #1</option>
+          <option value="2">Category #2</option>
+          <option value="3">Category #3</option>
+        </select>
+      </div>
+      <div class="form-group col-md-12" ng-class=" { 'has-error has-feedback': topicForm.content.$invalid && topicForm.content.$dirty, 'has-success has-feedback': topicForm.content.$valid && topicForm.content.$dirty }">
+        <textarea class="form-control" ng-model="topic.content" name="content" placeholder="Type here." rows="8" required></textarea>
+        <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="topicForm.content.$valid && topicForm.content.$dirty"></span>
+        <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="topicForm.content.$invalid && topicForm.content.$dirty"></span>
+      </div>
+      <div class="form-group col-md-12">
+        <button type="submit" class="btn btn-primary" ng-disabled="topicForm.$invalid">Create Topic</button>
+        <a class="btn btn-link" ng-click="newTopicForm.show = false">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
