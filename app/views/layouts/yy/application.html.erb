@@ -50,12 +50,12 @@
         <li><a href="#">Category #3</a></li>
       </ul>
     </div>
-    <a href="#" class="btn btn-link">Latest</a>
+    <a ng-href="#/" class="btn" ng-class="{'btn-link':!(isActive('')||isActive('/')),'btn-primary':isActive('')||isActive('/')}">Latest</a>
     <a href="#" class="btn btn-link" ng-if="currentUserId">New</a>
     <a href="#" class="btn btn-link" ng-if="currentUserId">Unread</a>
     <a href="#" class="btn btn-link" ng-if="currentUserId">Starred</a>
     <a href="#" class="btn btn-link">Top</a>
-    <a ng-href="#/categories" class="btn btn-link">Categories</a>
+    <a ng-href="#/categories" class="btn" ng-class="{'btn-link':!isActive('/categories'),'btn-primary':isActive('/categories')}">Categories</a>
     <a href="#" class="btn btn-default pull-right" ng-if="currentUserId" ng-click="newTopicForm.show = true">+ Create Topic</a>
   </div>
 
