@@ -18,7 +18,7 @@ module Yy
 
     private
     def safe_params
-      params.require(:topic).permit(:title, :content)
+      params.require(:topic).permit(:title, :content, :category_id)
     end
   end
 end

@@ -36,4 +36,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda'
   s.add_development_dependency 'poltergeist', '~> 1.5.0'
   s.add_development_dependency 'selenium-webdriver'
+  s.add_development_dependency 'pry-rails'
 end

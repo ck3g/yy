@@ -19,11 +19,28 @@ module Yy
 
     describe 'POST #create' do
       context 'with valid attributes' do
-        before do
+        let!(:category) { create :yy_category, name: 'AngularJS' }
+        def create_topic
           post :create, use_route: :yy, format: :json,
-            topic: { title: 'My topic title', content: "Content" }
+            topic: { title: 'My topic title',
+                     content: "Content",
+                     category_id: category.id }
         end
+
+        before do
+          create_topic unless example.metadata[:skip_before]
+        end
+
         it { should respond_with :created }
+        it "creates new topic", skip_before: true do
+          expect { create_topic }.to change(Yy::Topic, :count).by(1)
+        end
+        it "assigns topic to current_user" do
+          expect(Topic.last.user).to eq user
+        end
+        it "assigns topic to category" do
+          expect(Topic.last.category).to eq category
+        end
       end
 
       context 'with invalid attributes' do

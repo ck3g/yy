@@ -6,6 +6,10 @@ module Yy
       expect(create :yy_topic).to be_valid
     end
 
+    describe '.associations' do
+      it { should belong_to :category }
+    end
+
     describe '.validations' do
       it { should validate_presence_of :title }
       it { should ensure_length_of(:title).is_at_least(10) }

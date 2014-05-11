@@ -6,6 +6,10 @@ module Yy
       expect(create :yy_category).to be_valid
     end
 
+    describe '.associations' do
+      it { should have_many(:topics).dependent :nullify }
+    end
+
     describe '.validation' do
       context 'when valid' do
         subject { create :yy_category }
