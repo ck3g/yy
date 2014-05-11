@@ -23,6 +23,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails', "~> 4.0.2"
   s.add_dependency 'bootstrap-sass', '~> 3.1.1'
   s.add_dependency 'gon', '~> 5.0.4'
+  s.add_dependency 'rabl', '~> 0.9.3'
+  s.add_dependency 'yajl-ruby', '~> 1.2.0'
 
   s.add_development_dependency "pg"
   s.add_development_dependency "devise", "~> 3.2.4"

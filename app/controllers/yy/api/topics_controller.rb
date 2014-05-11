@@ -5,8 +5,7 @@ module Yy
     respond_to :json
 
     def index
-      topics = Topic.all
-      respond_with topics
+      @topics = Topic.all
     end
 
     def create

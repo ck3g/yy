@@ -5,5 +5,7 @@ module Yy
 
     validates :title, presence: true, length: { minimum: 10 }
     validates :content, :user_id, presence: true
+
+    delegate :name, to: :category, prefix: true, allow_nil: true
   end
 end
