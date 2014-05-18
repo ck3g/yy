@@ -5,6 +5,8 @@ require 'sass-rails'
 require 'bootstrap-sass'
 require 'devise'
 require 'gon'
+require 'friendly_id'
+require 'babosa'
 
 module Yy
   class Engine < ::Rails::Engine

@@ -16,5 +16,10 @@ module Yy
       it { should validate_presence_of :content }
       it { should validate_presence_of :user_id }
     end
+
+    it "properly create slug for topic" do
+      topic = create :yy_topic, title: 'Мой first топик'
+      expect(topic.slug).to eq "мой-first-топик"
+    end
   end
 end

@@ -1,5 +1,9 @@
 module Yy
   class Topic < ActiveRecord::Base
+    include ::FriendlyId
+
+    friendly_id :title, use: :slugged
+
     belongs_to :user, class_name: Yy.user_class
     belongs_to :category
 
@@ -7,5 +11,9 @@ module Yy
     validates :content, :user_id, presence: true
 
     delegate :name, to: :category, prefix: true, allow_nil: true
+
+    def normalize_friendly_id(input)
+      input.to_s.to_slug.normalize(translitirations: :russian).to_s
+    end
   end
 end
