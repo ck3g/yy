@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'yajl-ruby', '~> 1.2.0'
   s.add_dependency 'friendly_id', '~> 5.0.3'
   s.add_dependency 'babosa'
+  s.add_dependency 'momentjs-rails', '~> 2.6.0'
 
   s.add_development_dependency "pg"
   s.add_development_dependency "devise", "~> 3.2.4"

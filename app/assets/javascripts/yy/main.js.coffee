@@ -1,5 +1,5 @@
 
-@Yy = angular.module("Yy", ['ngRoute', 'ngResource'])
+@Yy = angular.module("Yy", ['ngRoute', 'ngResource', 'angularMoment'])
 
 # TODO: handle 404 errors
 @Yy.config (['$routeProvider', ($routeProvider) ->

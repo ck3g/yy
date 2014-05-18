@@ -7,6 +7,7 @@ require 'devise'
 require 'gon'
 require 'friendly_id'
 require 'babosa'
+require 'momentjs-rails'
 
 module Yy
   class Engine < ::Rails::Engine
