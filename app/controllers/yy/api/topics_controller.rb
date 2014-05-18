@@ -8,6 +8,10 @@ module Yy
       @topics = Topic.all
     end
 
+    def show
+      @topic = Topic.friendly.find params[:id]
+    end
+
     def create
       topic = Topic.new safe_params
       topic.user = current_user

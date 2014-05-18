@@ -17,6 +17,17 @@ module Yy
       it { expect(Topic).to have_received(:all) }
     end
 
+    describe 'GET #show' do
+      let(:topic) { create :yy_topic }
+
+      before do
+        get :show, id: topic.slug, use_route: :yy, format: :json
+      end
+
+      it { should respond_with :success }
+      it { expect(assigns[:topic]).to eq topic }
+    end
+
     describe 'POST #create' do
       context 'with valid attributes' do
         let!(:category) { create :yy_category, name: 'AngularJS' }

@@ -1,6 +1,6 @@
 Yy::Engine.routes.draw do
   namespace :api, defaults: { format: :json } do
-    resources :topics, only: [:index, :create]
+    resources :topics, only: [:index, :show, :create]
     resources :categories, only: [:index]
   end
 

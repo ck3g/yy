@@ -15,7 +15,7 @@
   <tbody>
     <tr ng-repeat="topic in topics">
       <td></td>
-      <td class="title">{{topic.title}}</td>
+      <td class="title"><a ng-href="#/topics/{{topic.slug}}">{{topic.title}}</a></td>
       <td><span class="label label-default" ng-if="!!topic.category_name">{{topic.category_name}}<span></td>
       <td></td>
       <td></td>
