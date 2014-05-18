@@ -50,6 +50,12 @@ Create `config/initializers/yy.rb`
 Yy.user_class = "User"
 ```
 
+### Required methods
+
+Yackety Yack requires from your application following methods:
+
+  * `UserModel#display_name` - To display user's name in Yy's views
+
 
 # License
 

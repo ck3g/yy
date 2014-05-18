@@ -1,6 +1,7 @@
 
 @Yy = angular.module("Yy", ['ngRoute', 'ngResource'])
 
+# TODO: handle 404 errors
 @Yy.config (['$routeProvider', ($routeProvider) ->
   $routeProvider
     .when('/topics/:id', { templateUrl: '../assets/yy/topics/show.html', controller: 'TopicCtrl'})
