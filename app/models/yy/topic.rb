@@ -13,7 +13,8 @@ module Yy
     delegate :name, to: :category, prefix: true, allow_nil: true
 
     def normalize_friendly_id(input)
-      input.to_s.to_slug.normalize(translitirations: :russian).to_s
+      input.to_s.to_slug.normalize(
+        translitirations: Yy.friendly_id_translitirations).to_s
     end
   end
 end
