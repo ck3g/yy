@@ -18,6 +18,11 @@ angular.module('Yy').controller 'TopicFormCtrl', ($scope, $location, Topic, NewT
       ).$save()
       topic.then (response) ->
         $scope.newTopicForm.show = false
+        $scope.topicForm.$setPristine()
+        $scope.topic =
+          title: ''
+          content: ''
+          category_id: ''
         $scope.topics.push response
-        $location.path('/')
+        $location.path("/topics/#{response.slug}")
 
