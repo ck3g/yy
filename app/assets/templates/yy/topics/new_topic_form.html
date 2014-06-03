@@ -5,7 +5,7 @@
     </div>
   <div class="topic-content row">
     <form name="topicForm" ng-submit="submitForm(topicForm.$valid)" novalidate>
-      <div class="form-group col-md-6" ng-class="{ 'has-error has-feedback': topicForm.title.$invalid && topicForm.title.$dirty, 'has-success has-feedback': topicForm.title.$valid && topicForm.title.$dirty }">
+      <div class="form-group col-md-6" ng-class="{ 'has-error': topicForm.title.$invalid && topicForm.title.$dirty, 'has-success': topicForm.title.$valid && topicForm.title.$dirty, 'has-feedback': topicForm.title.$dirty }">
         <input class="form-control" ng-model="topic.title" name="title" placeholder="Type your title here. Title should contains at least 10 characters" required ng-minlength="10" />
         <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="topicForm.title.$valid && topicForm.title.$dirty"></span>
         <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="topicForm.title.$invalid && topicForm.title.$dirty"></span>
@@ -15,7 +15,7 @@
           <option value="{{category.id}}" ng-repeat="category in categories">{{category.name}}</option>
         </select>
       </div>
-      <div class="form-group col-md-12" ng-class=" { 'has-error has-feedback': topicForm.content.$invalid && topicForm.content.$dirty, 'has-success has-feedback': topicForm.content.$valid && topicForm.content.$dirty }">
+      <div class="form-group col-md-12" ng-class=" { 'has-error': topicForm.content.$invalid && topicForm.content.$dirty, 'has-success ': topicForm.content.$valid && topicForm.content.$dirty, 'has-feedback': topicForm.content.$dirty }">
         <textarea class="form-control" ng-model="topic.content" name="content" placeholder="Type here." rows="8" required></textarea>
         <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="topicForm.content.$valid && topicForm.content.$dirty"></span>
         <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="topicForm.content.$invalid && topicForm.content.$dirty"></span>
