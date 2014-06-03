@@ -1,15 +1,13 @@
 <div class="topic-actions">
   <div class="btn-group">
-    <button type="button" class="btn btn-default">All categories</button>
+    <button type="button" class="btn btn-default">{{categoryFilter.current.name}}</button>
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
       <span class="caret"></span>
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu" role="menu">
-      <li><a href="#">All categories</a></li>
-      <li><a href="#">Category #1</a></li>
-      <li><a href="#">Category #2</a></li>
-      <li><a href="#">Category #3</a></li>
+      <li><a ng-click="categoryFilter.reset()" ng-href="#/">All categories</a></li>
+      <li ng-repeat="category in categories"><a ng-click="categoryFilter.set(category.name)" ng-href="#/">{{category.name}}</a></li>
     </ul>
   </div>
   <a ng-href="#/" class="btn" ng-class="{'btn-link':!(isActive('')||isActive('/')),'btn-primary':isActive('')||isActive('/')}">Latest</a>
