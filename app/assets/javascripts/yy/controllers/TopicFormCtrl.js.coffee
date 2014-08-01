@@ -25,4 +25,3 @@ angular.module('Yy').controller 'TopicFormCtrl', ($scope, $location, Topic, NewT
           category_id: ''
         $scope.topics.push response
         $location.path("/topics/#{response.slug}")
-

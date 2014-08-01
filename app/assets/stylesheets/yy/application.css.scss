@@ -20,7 +20,7 @@ body {
   font-family: 'Open Sans', 'Trebuchet MS', arial, sans-serif;
 }
 
-#create-topic-control {
+.form-window {
   height: 400px;
   width: 100%;
   position: fixed;
@@ -31,8 +31,16 @@ body {
   filter: alpha(opacity=90);
   opacity: 0.9;
 
+
+
   div.modal-header {
     padding: 20px 70px;
+
+    h4.modal-title {
+      .topic-title {
+        font-weight: bold;
+      }
+    }
   }
 
   div.topic-content {

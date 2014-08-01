@@ -6,6 +6,7 @@ module Yy
 
     belongs_to :user, class_name: Yy.user_class
     belongs_to :category
+    has_many :comments, dependent: :destroy
 
     validates :title, presence: true, length: { minimum: 10 }
     validates :content, :user_id, presence: true

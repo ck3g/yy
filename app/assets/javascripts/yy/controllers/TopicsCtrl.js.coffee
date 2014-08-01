@@ -5,5 +5,3 @@ angular.module('Yy').controller 'TopicsCtrl', ($scope, $location, $http, Session
   $scope.currentUserId = Session.currentUser.id
 
   $scope.categoryFilter = CategoryFilter
-
-

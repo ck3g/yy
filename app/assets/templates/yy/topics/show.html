@@ -17,10 +17,12 @@
         </p>
 
         <div class="actions pull-right">
-          <a href="#" class="btn btn-primary">Reply</a>
+          <a class="btn btn-primary" ng-click="newReplyForm.show = true">Reply</a>
         </div>
         <div class="clearfix"></div>
       </div>
     </div>
   </div>
 </div>
+
+<div ng-include="'../assets/yy/topics/new_reply_form.html'"></div>

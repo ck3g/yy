@@ -8,6 +8,7 @@ module Yy
 
     describe '.associations' do
       it { should belong_to :category }
+      it { should have_many(:comments).dependent :destroy }
     end
 
     describe '.validations' do

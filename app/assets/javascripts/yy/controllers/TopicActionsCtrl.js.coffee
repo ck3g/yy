@@ -9,4 +9,3 @@ angular.module('Yy').controller 'TopicActionsCtrl', ($scope, $location, NewTopic
   $scope.categories = Category.query()
 
   $scope.categoryFilter = CategoryFilter
-
