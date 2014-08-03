@@ -17,7 +17,7 @@
         </p>
 
         <div class="actions pull-right">
-          <a class="btn btn-primary" ng-click="newReplyForm.show = true">Reply</a>
+          <a class="btn btn-primary" ng-if="currentUserId" ng-click="$parent.newReplyForm.show = true">Reply</a>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -44,7 +44,7 @@
           </p>
 
           <div class="actions pull-right">
-            <a class="btn btn-default" ng-click="newReplyForm.show = true">Reply</a>
+            <a class="btn btn-default" ng-if="currentUserId" ng-click="$parent.newReplyForm.show = true">Reply</a>
           </div>
           <div class="clearfix"></div>
         </div>
