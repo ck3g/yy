@@ -24,5 +24,34 @@
     </div>
   </div>
 </div>
+<hr />
+
+<div ng-repeat="comment in comments">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="media">
+        <a href="#" class="pull-left">
+          <img class="media-object" src="http://placehold.it/90x90" />
+        </a>
+        <div class="media-body">
+          <div class="media-heading">
+            <h4 class="pull-left">{{comment.user_display_name}}</h4>
+            <span class="pull-right" am-time-ago="comment.created_at"></span>
+            <div class="clearfix"></div>
+          </div>
+          <p>
+            {{comment.content}}
+          </p>
+
+          <div class="actions pull-right">
+            <a class="btn btn-default" ng-click="newReplyForm.show = true">Reply</a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+</div>
 
 <div ng-include="'../assets/yy/topics/new_reply_form.html'"></div>

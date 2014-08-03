@@ -6,6 +6,19 @@ module Yy
     let!(:topic) { create :yy_topic }
     before { sign_in_as user }
 
+    describe 'GET #index' do
+      let!(:comment) { create :yy_comment, topic: topic }
+      before do
+        get :index, topic_id: topic.slug, use_route: :yy, format: :json
+      end
+
+      it { should respond_with :success }
+      it { should render_template :index }
+      it "" do
+        expect(assigns[:comments]).to eq [comment]
+      end
+    end
+
     describe 'POST #create' do
       context 'with valid attributes' do
         def create_comment

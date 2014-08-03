@@ -4,5 +4,7 @@ module Yy
     belongs_to :topic
 
     validates :topic, :user, :content, presence: true
+
+    delegate :display_name, to: :user, prefix: true
   end
 end
